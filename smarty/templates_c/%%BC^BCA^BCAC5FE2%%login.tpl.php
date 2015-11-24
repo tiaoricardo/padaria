@@ -1,6 +1,6 @@
-<?php /* Smarty version 2.6.12, created on 2015-11-22 20:02:24
+<?php /* Smarty version 2.6.12, created on 2015-11-24 00:14:27
          compiled from main/login.tpl */ ?>
-<!DOCTYPE html>
+´l é<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -40,6 +40,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4 col-md-offset-4">
+			<h1 class="text-center"><?php echo @APP_NAME; ?>
+</h1>
                 <div class="login-panel panel panel-info">
                     <div class="panel-heading">
                         <h3 class="panel-title">Entrar no Sistema</h3>

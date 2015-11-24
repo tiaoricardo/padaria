@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+´l é<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -37,6 +37,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4 col-md-offset-4">
+			<h1 class="text-center">{$smarty.const.APP_NAME}</h1>
                 <div class="login-panel panel panel-info">
                     <div class="panel-heading">
                         <h3 class="panel-title">Entrar no Sistema</h3>
