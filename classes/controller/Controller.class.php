@@ -246,7 +246,7 @@ class Controller {
 		$_POST["senha"] = $this->encrypt($_POST["senha"]);
 
 		$login = new Usuario();
-		
+
 		if ($login->save($_POST)) {
 				
 			$this->redirect("index.php?p=usuarios");
