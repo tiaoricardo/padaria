@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.12, created on 2015-11-24 17:53:28
+<?php /* Smarty version 2.6.12, created on 2015-11-24 15:59:05
          compiled from app/relatorios.vendas.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_format', 'app/relatorios.vendas.tpl', 30, false),array('modifier', 'date_format', 'app/relatorios.vendas.tpl', 158, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_format', 'app/relatorios.vendas.tpl', 28, false),array('modifier', 'date_format', 'app/relatorios.vendas.tpl', 135, false),)), $this); ?>
 <div class="row">
     <div class="col-lg-12">
         <h1 class="page-header">Relatórios</h1>
@@ -16,88 +16,69 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_form
     
     <div class="panel panel-default">
         <div class="panel-heading">
-           Totalizações
-        </div>
-       
-        </br>
+           <h4>Totalizações</h4>
+        </div>        
         <!-- /.panel-heading -->
- 		
-<div class="row">
-    <div class="col-lg-3 col-md-6">
-        <div class="panel panel-primary">
-            <div class="panel-heading">
-                <div class="row">
-                    <div class="col-xs-3">
-                        <i class="fa fa-money fa-5x"></i>
-                    </div>
-                    <div class="col-xs-9 text-right">
-                        <div class="lead">R$ <?php echo ((is_array($_tmp=$this->_tpl_vars['totais']['recebido'])) ? $this->_run_mod_handler('number_format', true, $_tmp, 2, ",", ".") : number_format($_tmp, 2, ",", ".")); ?>
+ 		<div class="panel-body">
+		<div class="row">
+		    <div class="col-lg-4 col-md-6">
+		        <div class="panel panel-success">
+		            <div class="panel-heading">
+		                <div class="row">
+		                    <div class="col-xs-3">
+		                        <i class="fa fa-money fa-5x"></i>
+		                    </div>
+		                    <div class="col-xs-9 text-right">
+		                        <div class="lead">R$ <?php echo ((is_array($_tmp=$this->_tpl_vars['totais']['recebido'])) ? $this->_run_mod_handler('number_format', true, $_tmp, 2, ",", ".") : number_format($_tmp, 2, ",", ".")); ?>
 </div>
-                        <div>Valor Recebido:</div>
-                    </div>
-                </div>
-            </div>
-            <a href="#">
-                <div class="panel-footer">
-                    <span class="pull-left">Mais Detalhes</span>
-                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                    <div class="clearfix"></div>
-                </div>
-            </a>
-        </div>
-    </div>
-    <div class="col-lg-3 col-md-6">
-        <div class="panel panel-yellow">
-            <div class="panel-heading">
-                <div class="row">
-                    <div class="col-xs-3">
-                        <i class="fa fa-shopping-cart fa-5x"></i>
-                    </div>
-                    <div class="col-xs-9 text-right">
-                        <div class="lead">R$ <?php echo ((is_array($_tmp=$this->_tpl_vars['totais']['fiado'])) ? $this->_run_mod_handler('number_format', true, $_tmp, 2, ",", ".") : number_format($_tmp, 2, ",", ".")); ?>
+		                        <div>Recebido</div>
+		                    </div>
+		                </div>
+		            </div>
+		          
+		        </div>
+		    </div>
+		    <div class="col-lg-4 col-md-6">
+		        <div class="panel panel-info">
+		            <div class="panel-heading">
+		                <div class="row">
+		                    <div class="col-xs-3">
+		                        <i class="fa fa-briefcase fa-5x"></i>
+		                    </div>
+		                    <div class="col-xs-9 text-right">
+		                        <div class="lead">R$ <?php echo ((is_array($_tmp=$this->_tpl_vars['totais']['fiado'])) ? $this->_run_mod_handler('number_format', true, $_tmp, 2, ",", ".") : number_format($_tmp, 2, ",", ".")); ?>
 </div>
-                        <div>Valor à Receber:</div>
-                    </div>
-                </div>
-            </div>
-            <a href="#">
-                <div class="panel-footer">
-                    <span class="pull-left">Mais Detalhes</span>
-                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                    <div class="clearfix"></div>
-                </div>
-            </a>
-        </div>
-    </div>
-    <div class="col-lg-3 col-md-6">
-        <div class="panel panel-red">
-            <div class="panel-heading">
-                <div class="row">
-                    <div class="col-xs-3">
-                        <i class="fa fa-usd fa-5x"></i>
-                    </div>
-                    <div class="col-xs-9 text-right">
-                        <div class="lead"> R$ <?php echo ((is_array($_tmp=$this->_tpl_vars['totais']['total'])) ? $this->_run_mod_handler('number_format', true, $_tmp, 2, ",", ".") : number_format($_tmp, 2, ",", ".")); ?>
+		                        <div>À Receber</div>
+		                    </div>
+		                </div>
+		            </div>
+		           
+		        </div>
+		    </div>
+		    <div class="col-lg-4 col-md-6">
+		        <div class="panel panel-danger">
+		            <div class="panel-heading">
+		                <div class="row">
+		                    <div class="col-xs-3">
+		                        <i class="fa fa-shopping-cart fa-5x"></i>
+		                    </div>
+		                    <div class="col-xs-9 text-right">
+		                        <div class="lead"> R$ <?php echo ((is_array($_tmp=$this->_tpl_vars['totais']['total'])) ? $this->_run_mod_handler('number_format', true, $_tmp, 2, ",", ".") : number_format($_tmp, 2, ",", ".")); ?>
 </div>
-                        <div>Total Geral:</div>
-                    </div>
-                </div>
-            </div>
-            <a href="#">
-                <div class="panel-footer">
-                    <span class="pull-left">Mais Detalhes</span>
-                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                    <div class="clearfix"></div>
-                </div>
-            </a>
-        </div>
-    </div>
-</div>							
+		                        <div>Total em Vendas</div>
+		                    </div>
+		                </div>
+		            </div>
+		           
+		        </div>
+		    </div>
+		</div>							
+	</div>	
 </div>	
 	
 <div class="panel panel-default">
 <div class="panel-heading">
-   Filtros do Relatório
+  <h4>Filtros do Relatório</h4>
 </div>
 <!-- /.panel-heading -->
 <div class="panel-body">
@@ -124,10 +105,6 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_form
         <a href="index.php?p=relatorios&acao=vendas&period=month">30 dias</a> 
     </li>
 
-    <li<?php if ($_GET['period'] == 'calendar'): ?> class="active"<?php endif; ?>>
-       <input type="button" class="btn btn-default" id="exemplo" value="Calendário">
-    </li>
-
     <?php echo '
     <script>
 function test(el) {
@@ -144,12 +121,12 @@ function test(el) {
     
 	    <div class="panel panel-default">
 	        <div class="panel-heading">
-	            Vendas por Período
+	          <h4>Vendas por Período</h4>
 	        </div>
 	        <!-- /.panel-heading -->
 	        <div class="panel-body">
 	            <div class="dataTable_wrapper">
-	                <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+	                <table class="table table-striped table-bordered table-hover" id="dataTables-example" data-order="[[ 1, &quot;desc&quot; ]]">
 	                    <thead>
 	                        <tr>
 	                            <th>Cliente</th>
@@ -166,7 +143,8 @@ function test(el) {
 	                        <tr class="odd gradeX">
 	                            <td><?php echo $this->_tpl_vars['item']['nome']; ?>
 </td>
-	                            <td class="text-center"><?php echo ((is_array($_tmp=$this->_tpl_vars['item']['data_venda'])) ? $this->_run_mod_handler('date_format', true, $_tmp, "%d/%m/%Y %Hh%M") : smarty_modifier_date_format($_tmp, "%d/%m/%Y %Hh%M")); ?>
+	                            <td class="text-center" data-order="<?php echo $this->_tpl_vars['item']['data_venda']; ?>
+"><?php echo ((is_array($_tmp=$this->_tpl_vars['item']['data_venda'])) ? $this->_run_mod_handler('date_format', true, $_tmp, "%d/%m/%Y %Hh%M") : smarty_modifier_date_format($_tmp, "%d/%m/%Y %Hh%M")); ?>
 </td>	                                                   
 	                            <td class="text-center">R$ <?php echo ((is_array($_tmp=$this->_tpl_vars['item']['valor'])) ? $this->_run_mod_handler('number_format', true, $_tmp, 2, ",", ".") : number_format($_tmp, 2, ",", ".")); ?>
 </td>	                                                   

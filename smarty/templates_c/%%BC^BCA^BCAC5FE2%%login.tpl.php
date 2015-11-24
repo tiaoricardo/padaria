@@ -1,6 +1,6 @@
-<?php /* Smarty version 2.6.12, created on 2015-11-24 00:14:27
+<?php /* Smarty version 2.6.12, created on 2015-11-24 14:36:10
          compiled from main/login.tpl */ ?>
-´l é<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>

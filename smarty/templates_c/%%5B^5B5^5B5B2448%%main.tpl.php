@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-11-23 05:29:37
+<?php /* Smarty version 2.6.12, created on 2015-11-24 15:30:41
          compiled from main/main.tpl */ ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -108,7 +108,7 @@ unset($_smarty_tpl_vars);
     <script src="assets/plugins/select2/select2.min.js"></script>
 
      <!-- DataTables JavaScript -->
-    <script src="assets/plugins/datatables/media/js/jquery.dataTables.js"></script>
+    <script src="assets/plugins/datatables/media/js/jquery.dataTables.min.js"></script>
     <script src="assets/plugins/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
     
     <!-- Input MaskMoney -->
@@ -123,10 +123,14 @@ unset($_smarty_tpl_vars);
     <!-- Page-Level Demo Scripts - Tables - Use for reference -->
     <?php echo '
     <script>
+    
+    
     $(document).ready(function() {
         $(\'#dataTables-example\').DataTable({
                 responsive: true
         });
+	   
+	   
 	   
 	   $("select").select2({formatNoMatches:"Nenhum item encontrado!"});	
 	   

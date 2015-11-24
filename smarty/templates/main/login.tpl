@@ -1,4 +1,4 @@
-´l é<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>

@@ -104,3 +104,6 @@ table.dataTable > tbody > tr.child span.dtr-title {
   min-width: 75px;
   font-weight: bold;
 }
+
+
+.dataTables_filter {text-align:right !important;}

@@ -12,85 +12,66 @@
     
     <div class="panel panel-default">
         <div class="panel-heading">
-           Totalizações
-        </div>
-       
-        </br>
+           <h4>Totalizações</h4>
+        </div>        
         <!-- /.panel-heading -->
- 		
-<div class="row">
-    <div class="col-lg-3 col-md-6">
-        <div class="panel panel-primary">
-            <div class="panel-heading">
-                <div class="row">
-                    <div class="col-xs-3">
-                        <i class="fa fa-money fa-5x"></i>
-                    </div>
-                    <div class="col-xs-9 text-right">
-                        <div class="lead">R$ {$totais.recebido|number_format:2:",":"."}</div>
-                        <div>Valor Recebido:</div>
-                    </div>
-                </div>
-            </div>
-            <a href="#">
-                <div class="panel-footer">
-                    <span class="pull-left">Mais Detalhes</span>
-                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                    <div class="clearfix"></div>
-                </div>
-            </a>
-        </div>
-    </div>
-    <div class="col-lg-3 col-md-6">
-        <div class="panel panel-yellow">
-            <div class="panel-heading">
-                <div class="row">
-                    <div class="col-xs-3">
-                        <i class="fa fa-shopping-cart fa-5x"></i>
-                    </div>
-                    <div class="col-xs-9 text-right">
-                        <div class="lead">R$ {$totais.fiado|number_format:2:",":"."}</div>
-                        <div>Valor à Receber:</div>
-                    </div>
-                </div>
-            </div>
-            <a href="#">
-                <div class="panel-footer">
-                    <span class="pull-left">Mais Detalhes</span>
-                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                    <div class="clearfix"></div>
-                </div>
-            </a>
-        </div>
-    </div>
-    <div class="col-lg-3 col-md-6">
-        <div class="panel panel-red">
-            <div class="panel-heading">
-                <div class="row">
-                    <div class="col-xs-3">
-                        <i class="fa fa-usd fa-5x"></i>
-                    </div>
-                    <div class="col-xs-9 text-right">
-                        <div class="lead"> R$ {$totais.total|number_format:2:",":"."}</div>
-                        <div>Total Geral:</div>
-                    </div>
-                </div>
-            </div>
-            <a href="#">
-                <div class="panel-footer">
-                    <span class="pull-left">Mais Detalhes</span>
-                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                    <div class="clearfix"></div>
-                </div>
-            </a>
-        </div>
-    </div>
-</div>							
+ 		<div class="panel-body">
+		<div class="row">
+		    <div class="col-lg-4 col-md-6">
+		        <div class="panel panel-success">
+		            <div class="panel-heading">
+		                <div class="row">
+		                    <div class="col-xs-3">
+		                        <i class="fa fa-money fa-5x"></i>
+		                    </div>
+		                    <div class="col-xs-9 text-right">
+		                        <div class="lead">R$ {$totais.recebido|number_format:2:",":"."}</div>
+		                        <div>Recebido</div>
+		                    </div>
+		                </div>
+		            </div>
+		          
+		        </div>
+		    </div>
+		    <div class="col-lg-4 col-md-6">
+		        <div class="panel panel-info">
+		            <div class="panel-heading">
+		                <div class="row">
+		                    <div class="col-xs-3">
+		                        <i class="fa fa-briefcase fa-5x"></i>
+		                    </div>
+		                    <div class="col-xs-9 text-right">
+		                        <div class="lead">R$ {$totais.fiado|number_format:2:",":"."}</div>
+		                        <div>À Receber</div>
+		                    </div>
+		                </div>
+		            </div>
+		           
+		        </div>
+		    </div>
+		    <div class="col-lg-4 col-md-6">
+		        <div class="panel panel-danger">
+		            <div class="panel-heading">
+		                <div class="row">
+		                    <div class="col-xs-3">
+		                        <i class="fa fa-shopping-cart fa-5x"></i>
+		                    </div>
+		                    <div class="col-xs-9 text-right">
+		                        <div class="lead"> R$ {$totais.total|number_format:2:",":"."}</div>
+		                        <div>Total em Vendas</div>
+		                    </div>
+		                </div>
+		            </div>
+		           
+		        </div>
+		    </div>
+		</div>							
+	</div>	
 </div>	
 	
 <div class="panel panel-default">
 <div class="panel-heading">
-   Filtros do Relatório
+  <h4>Filtros do Relatório</h4>
 </div>
 <!-- /.panel-heading -->
 <div class="panel-body">
@@ -117,10 +98,6 @@
         <a href="index.php?p=relatorios&acao=vendas&period=month">30 dias</a> 
     </li>
 
-    <li{if $smarty.get.period == "calendar"} class="active"{/if}>
-       <input type="button" class="btn btn-default" id="exemplo" value="Calendário">
-    </li>
-
     {literal}
     <script>
 function test(el) {
@@ -136,12 +113,12 @@ function test(el) {
     
 	    <div class="panel panel-default">
 	        <div class="panel-heading">
-	            Vendas por Período
+	          <h4>Vendas por Período</h4>
 	        </div>
 	        <!-- /.panel-heading -->
 	        <div class="panel-body">
 	            <div class="dataTable_wrapper">
-	                <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+	                <table class="table table-striped table-bordered table-hover" id="dataTables-example" data-order="[[ 1, &quot;desc&quot; ]]">
 	                    <thead>
 	                        <tr>
 	                            <th>Cliente</th>
@@ -155,7 +132,7 @@ function test(el) {
 					{foreach from = $lista item = item}
 	                        <tr class="odd gradeX">
 	                            <td>{$item.nome}</td>
-	                            <td class="text-center">{$item.data_venda|date_format:"%d/%m/%Y %Hh%M"}</td>	                                                   
+	                            <td class="text-center" data-order="{$item.data_venda}">{$item.data_venda|date_format:"%d/%m/%Y %Hh%M"}</td>	                                                   
 	                            <td class="text-center">R$ {$item.valor|number_format:2:",":"."}</td>	                                                   
 	                            <td class="text-center">
 							
