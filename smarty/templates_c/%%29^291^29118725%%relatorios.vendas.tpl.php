@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-11-23 05:59:36
+<?php /* Smarty version 2.6.12, created on 2015-11-24 17:53:28
          compiled from app/relatorios.vendas.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_format', 'app/relatorios.vendas.tpl', 30, false),array('modifier', 'date_format', 'app/relatorios.vendas.tpl', 158, false),)), $this); ?>
@@ -125,7 +125,7 @@ smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_form
     </li>
 
     <li<?php if ($_GET['period'] == 'calendar'): ?> class="active"<?php endif; ?>>
-       <a href="index.php?p=relatorios&acao=vendas&period=calendar" type="button" class="btn btn-default" id="exemplo" value="Calendário">
+       <input type="button" class="btn btn-default" id="exemplo" value="Calendário">
     </li>
 
     <?php echo '

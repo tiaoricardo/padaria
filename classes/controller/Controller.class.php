@@ -235,7 +235,7 @@ class Controller {
 	 function encrypt($pwd){
 	 	$keyworld = "P4D4R14";
 	 	$hash = md5($keyworld);
-		return md5($hash.$pwd.$salt);
+		return md5($hash.$pwd.$hash);
 
 	}
 

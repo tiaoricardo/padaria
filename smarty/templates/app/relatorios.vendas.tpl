@@ -118,7 +118,7 @@
     </li>
 
     <li{if $smarty.get.period == "calendar"} class="active"{/if}>
-       <a href="index.php?p=relatorios&acao=vendas&period=calendar" type="button" class="btn btn-default" id="exemplo" value="Calendário">
+       <input type="button" class="btn btn-default" id="exemplo" value="Calendário">
     </li>
 
     {literal}

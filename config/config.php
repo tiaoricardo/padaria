@@ -5,7 +5,7 @@ define("APP_NAME","Panificadora IDEAL");
 
 define("DB_HOST","localhost");
 define("DB_USER","root");
-define("DB_PASSWORD","ifma");
+define("DB_PASSWORD","");
 define("DB_NAME","syspadaria");
 
 ?>
