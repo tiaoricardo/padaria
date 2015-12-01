@@ -32,6 +32,9 @@ if ($app->isLogged()) {
 		case "vendas":
 			$app->controllerVendas();
 			break; 
+		case "caixa":
+			$app->controllerCaixa();
+			break; 
 		case "relatorios":
 			$app->controllerRelatorios();
 			break; 

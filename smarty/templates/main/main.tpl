@@ -121,7 +121,7 @@
 	   
 	   $("select").select2({formatNoMatches:"Nenhum item encontrado!"});	
 	   
-	   $("#valor").maskMoney({showSymbol:true, symbol:"R$ ",decimal:",",thousands:"."});
+	   $(".big-field").maskMoney({showSymbol:true, symbol:"R$ ",decimal:",",thousands:"."});
 	   
 	   $('html').keydown(function(e){
 		

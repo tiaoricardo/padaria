@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-11-24 15:30:41
+<?php /* Smarty version 2.6.12, created on 2015-12-01 10:44:58
          compiled from main/main.tpl */ ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -134,7 +134,7 @@ unset($_smarty_tpl_vars);
 	   
 	   $("select").select2({formatNoMatches:"Nenhum item encontrado!"});	
 	   
-	   $("#valor").maskMoney({showSymbol:true, symbol:"R$ ",decimal:",",thousands:"."});
+	   $(".big-field").maskMoney({showSymbol:true, symbol:"R$ ",decimal:",",thousands:"."});
 	   
 	   $(\'html\').keydown(function(e){
 		

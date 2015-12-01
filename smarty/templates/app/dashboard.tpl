@@ -62,7 +62,7 @@
 					   <div class="form-group col-md-9">
                                 <label class="col-md-2 text-right">Valor <small style="color:blue">(F2)</small>: </label>
 						  <div class="col-md-4">
-							<input type="text" id="valor" placeholder="R$ 0,00" name="valor" style="text-align:center;font-size:22px;width:150px;color:red;font-weight:bold" class="form-control input-lg" autofocus />
+							<input type="text" id="valor" placeholder="R$ 0,00" name="valor" class="form-control input-lg big-field" autofocus />
 							<label style="font-weight:normal;">  
 							  <input type="checkbox" id="fiado" onclick="anotar()" name="fiado" value="sim" /> Anotar <small style="color:blue">(F6)</small>
 							</label>  
@@ -110,19 +110,20 @@
 <script type="text/javascript">
 
 	function validarVenda() {
-	
+		
 		var v = $("#valor").val();		
+		v = v.replace("R$ ","");
 		v = v.replace(".","");
 		v = v.replace(",",".");	
 		
 		v = parseFloat(v);
-
-		
+				
 		if (v <=0 || isNaN(v)) {
 			$('#myModal').modal('show');   
+			return false;
 		}
 		
-		return (v > 0);
+		return true;
 	
 	}
 

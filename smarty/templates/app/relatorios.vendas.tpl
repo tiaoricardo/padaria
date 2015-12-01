@@ -132,7 +132,7 @@ function test(el) {
 					{foreach from = $lista item = item}
 	                        <tr class="odd gradeX">
 	                            <td>{$item.nome}</td>
-	                            <td class="text-center" data-order="{$item.data_venda}">{$item.data_venda|date_format:"%d/%m/%Y %Hh%M"}</td>	                                                   
+	                            <td class="text-center" data-order="{$item.data_venda}">{$item.data_venda|date_format:"%d/%m/%Y às %Hh%M"}</td>	                                                   
 	                            <td class="text-center">R$ {$item.valor|number_format:2:",":"."}</td>	                                                   
 	                            <td class="text-center">
 							

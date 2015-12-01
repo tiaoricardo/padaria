@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-11-21 17:32:20
+<?php /* Smarty version 2.6.12, created on 2015-12-01 11:31:42
          compiled from includes/menu.tpl */ ?>
 <div class="navbar-default sidebar" role="navigation">
 	 <div class="sidebar-nav navbar-collapse">
@@ -7,18 +7,7 @@
 			   <a href="index.php"><i class="fa fa-dashboard fa-fw"></i> Painel Inicial</a>
 		    </li>
 							   
-		    <li>
-			   <a href="#"><i class="fa fa-user-md fa-fw"></i> Usuários <span class="fa arrow"></span></a>
-			   <ul class="nav nav-second-level">
-				  <li>
-					 <a href="index.php?p=usuarios&acao=create">Cadastrar</a>
-				  </li>                                
-				  <li>
-					 <a href="index.php?p=usuarios">Visualizar</a>
-				  </li>
-			   </ul>
-			   <!-- /.nav-second-level -->
-		    </li>
+		  
 		    <li>
 			   <a href="#"><i class="fa fa-users fa-fw"></i> Clientes<span class="fa arrow"></span></a>
 			   <ul class="nav nav-second-level">
@@ -41,6 +30,32 @@
 					 <a href="index.php?p=produtos&acao=create">Cadastrar</a>
 				  </li>  
 				  
+			   </ul>
+			   <!-- /.nav-second-level -->
+		    </li>
+		    
+		      <li>
+			   <a href="#"><i class="fa fa-book fa-fw"></i> Fluxo de Caixa <span class="fa arrow"></span></a>
+			   <ul class="nav nav-second-level">
+				  <li>
+					 <a href="index.php?p=caixa&acao=create">Cadastrar</a>
+				  </li>                                
+				  <li>
+					 <a href="index.php?p=caixa">Visualizar</a>
+				  </li>
+			   </ul>
+			   <!-- /.nav-second-level -->
+		    </li>
+		    
+		      <li>
+			   <a href="#"><i class="fa fa-user-md fa-fw"></i> Usuários <span class="fa arrow"></span></a>
+			   <ul class="nav nav-second-level">
+				  <li>
+					 <a href="index.php?p=usuarios&acao=create">Cadastrar</a>
+				  </li>                                
+				  <li>
+					 <a href="index.php?p=usuarios">Visualizar</a>
+				  </li>
 			   </ul>
 			   <!-- /.nav-second-level -->
 		    </li>

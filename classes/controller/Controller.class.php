@@ -4,6 +4,7 @@ require_once "classes/model/Usuarios.class.php";
 require_once "classes/model/Clientes.class.php";
 require_once "classes/model/Produtos.class.php";
 require_once "classes/model/Vendas.class.php";
+require_once "classes/model/Movimentos.class.php";
 
 class Controller {
 
@@ -107,6 +108,34 @@ class Controller {
 		
 	}
 	
+	public function controllerCaixa() {
+	
+		if ($_GET["acao"] == "") {
+
+			$caixa = new Movimento();
+
+			$this->view->assign("saldo",$caixa->getSaldoHoje());
+			$this->view->assign("lista",$caixa->getMovimentos());
+			
+			$this->view->setContent("app/caixa.listar");
+
+		}
+				
+		if ($_GET["acao"] == "create") {
+
+			if ($_POST) {
+				
+				$this->saveCaixa();
+							
+			}
+			
+			$this->view->setContent("app/caixa.form");
+			
+		}
+		
+	}
+	
+	
 	public function saveVenda() {
 		
 		$venda = new Venda();
@@ -139,6 +168,40 @@ class Controller {
 		}
 		
 		$this->redirect("index.php");
+	
+	}
+	
+	public function saveCaixa() {
+		
+		$caixa = new Movimento();
+		
+		$valor =  self::toMoney($_POST["valor"]);
+		
+		if ($valor > 0) {
+				
+			$dados["descricao"] = $_POST["descricao"];			
+			
+			$dados["data_mov"] = date("Y-m-d H:i:s");
+			
+			if ($_POST["tipo"] == "entrada") {
+				$dados["valor"] = $valor;
+			} else {
+				$dados["valor"] = $valor * (-1);
+			}
+			
+			if ($caixa->save($dados)) {
+				
+				$_SESSION["success"] = true;
+						
+			}
+		
+		} else {
+			
+			$_SESSION["error"] = "Por favor, informe um valor <strong>diferente de zero (R$ 0,00)</strong> para registrar um movimento!";
+		
+		}
+		
+		$this->redirect("index.php?p=caixa");
 	
 	}
 	

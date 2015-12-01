@@ -354,3 +354,17 @@ table.dataTable thead .sorting:after {
 }
 
 
+.red .active a,
+.red .active a:hover {
+    background-color: #C00 !important;
+}
+
+.red #in.active a,
+.red #in.active a:hover {
+    background-color: #090 !important;
+}
+
+
+.big-field {text-align:center;font-size:22px;width:150px;color:red;font-weight:bold;}
+
+.no-margins {margin:0 auto;}

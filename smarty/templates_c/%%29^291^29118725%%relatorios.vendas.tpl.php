@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.12, created on 2015-11-24 15:59:05
+<?php /* Smarty version 2.6.12, created on 2015-12-01 11:41:41
          compiled from app/relatorios.vendas.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'number_format', 'app/relatorios.vendas.tpl', 28, false),array('modifier', 'date_format', 'app/relatorios.vendas.tpl', 135, false),)), $this); ?>
@@ -144,7 +144,7 @@ function test(el) {
 	                            <td><?php echo $this->_tpl_vars['item']['nome']; ?>
 </td>
 	                            <td class="text-center" data-order="<?php echo $this->_tpl_vars['item']['data_venda']; ?>
-"><?php echo ((is_array($_tmp=$this->_tpl_vars['item']['data_venda'])) ? $this->_run_mod_handler('date_format', true, $_tmp, "%d/%m/%Y %Hh%M") : smarty_modifier_date_format($_tmp, "%d/%m/%Y %Hh%M")); ?>
+"><?php echo ((is_array($_tmp=$this->_tpl_vars['item']['data_venda'])) ? $this->_run_mod_handler('date_format', true, $_tmp, "%d/%m/%Y às %Hh%M") : smarty_modifier_date_format($_tmp, "%d/%m/%Y às %Hh%M")); ?>
 </td>	                                                   
 	                            <td class="text-center">R$ <?php echo ((is_array($_tmp=$this->_tpl_vars['item']['valor'])) ? $this->_run_mod_handler('number_format', true, $_tmp, 2, ",", ".") : number_format($_tmp, 2, ",", ".")); ?>
 </td>	                                                   
